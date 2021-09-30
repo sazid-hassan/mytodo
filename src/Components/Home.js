@@ -36,7 +36,7 @@ export default function Home() {
 
     const getLocal = () => {
         if (localStorage.getItem('todos' === null)) {
-            localStorage.setItem('todos', JSON.stringify([]));
+            localStorage.setItem('todos', JSON.stringify());
         }
         else {
             let todoLocal = JSON.parse(localStorage.getItem("todos"));

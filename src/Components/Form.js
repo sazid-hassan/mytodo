@@ -24,7 +24,12 @@ export default function Form({
         {
             status: 'unfinished',
             label: 'Unfinished'
+        },
+        {
+            status: 'finished',
+            label: 'finished'
         }
+
 
     ]
 

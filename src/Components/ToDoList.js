@@ -15,7 +15,7 @@ export default function ToDoList({ todos, setTodos, filteredTodos }) {
         <>
             <div className='todo-container'>
                 <ul className='todo-list' >
-                    {filteredTodos.map(todo => (
+                    {todos.map(todo => (
                         <ToDo
                             key={todo.id}
                             text={todo.text}

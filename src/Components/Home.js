@@ -51,10 +51,10 @@ export default function Home() {
     //     getLocal();
     // }, [])
 
-    useEffect(() => {
-        filterHandle();
-        saveLocal();
-    }, [todos, status])
+    // useEffect(() => {
+    //     filterHandle();
+    //     saveLocal();
+    // }, [todos, status])
 
 
     return (

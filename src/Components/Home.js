@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Typography from '@material-ui/core/Typography';
 
 //Components
@@ -11,39 +11,39 @@ export default function Home() {
     //states
     const [inputText, setInputText] = useState("");
     const [todos, setTodos] = useState([]);
-    const [status, setStatus] = useState("all");
-    const [filteredTodos, setFilteredTodos] = useState([]);
+    //const [status, setStatus] = useState("all");
+    //const [filteredTodos, setFilteredTodos] = useState([]);
 
-    //func
-    const filterHandle = () => {
-        switch (status) {
-            case 'finished':
-                setFilteredTodos(todos.filter(todo => todo.finished === true));
-                break;
-            case 'Unfinished':
-                setFilteredTodos(todos.filter(todo => todo.finished === false));
-                break;
-            default:
-                setFilteredTodos(todos);
-        }
-    }
+    // //func
+    // const filterHandle = () => {
+    //     switch (status) {
+    //         case 'finished':
+    //             setFilteredTodos(todos.filter(todo => todo.finished === true));
+    //             break;
+    //         case 'Unfinished':
+    //             setFilteredTodos(todos.filter(todo => todo.finished === false));
+    //             break;
+    //         default:
+    //             setFilteredTodos(todos);
+    //     }
+    // }
 
-    //save to local
+    // //save to local
 
-    const saveLocal = () => {
-        localStorage.setItem('todos', JSON.stringify(todos))
-    }
+    // const saveLocal = () => {
+    //     localStorage.setItem('todos', JSON.stringify(todos))
+    // }
 
-    const getLocal = () => {
-        if (localStorage.getItem('todos' === null)) {
-            localStorage.setItem('todos', JSON.stringify([]));
-        }
-        else {
-            let todoLocal = JSON.parse(localStorage.getItem("todos"));
-            console.log(todoLocal)
-            setTodos(todoLocal);
-        }
-    }
+    // const getLocal = () => {
+    //     if (localStorage.getItem('todos' === null)) {
+    //         localStorage.setItem('todos', JSON.stringify([]));
+    //     }
+    //     else {
+    //         let todoLocal = JSON.parse(localStorage.getItem("todos"));
+    //         console.log(todoLocal)
+    //         setTodos(todoLocal);
+    //     }
+    // }
 
 
     //effect
@@ -68,13 +68,13 @@ export default function Home() {
                 inputText={inputText}
                 setTodos={setTodos}
                 todos={todos}
-                setStatus={setStatus}
+            //setStatus={setStatus}
             />
 
             <ToDoList
                 todos={todos}
                 setTodos={setTodos}
-                filteredTodos={filteredTodos}
+            //filteredTodos={filteredTodos}
 
             />
         </>

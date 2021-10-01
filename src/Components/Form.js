@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+//import { useState } from 'react';
 
 //MUI
 import TextField from '@material-ui/core/TextField';
@@ -13,30 +13,30 @@ export default function Form({
     setStatus
 }) {
 
-    const [category, setCategory] = useState();
+    // const [category, setCategory] = useState();
 
-    const categories = [
-        {
-            status: 'all',
-            label: 'ALL'
-        },
+    // const categories = [
+    //     {
+    //         status: 'all',
+    //         label: 'ALL'
+    //     },
 
-        {
-            status: 'unfinished',
-            label: 'Unfinished'
-        },
-        {
-            status: 'finished',
-            label: 'finished'
-        }
+    //     {
+    //         status: 'unfinished',
+    //         label: 'Unfinished'
+    //     },
+    //     {
+    //         status: 'finished',
+    //         label: 'finished'
+    //     }
 
 
-    ]
+    // ]
 
-    const handleChange = (event) => {
-        setCategory(event.target.value);
-        setStatus(event.target.value);
-    };
+    // const handleChange = (event) => {
+    //     setCategory(event.target.value);
+    //     setStatus(event.target.value);
+    // };
 
     const handleChangeTitle = (event) => {
         setInputText(event.target.value);
